@@ -1,7 +1,7 @@
 """
 calculatepi.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: John W
+Credit: dan
 Assignment:
 
 Write and submit a Python program that computes an approximate value of π by calculating the following sum:
@@ -24,6 +24,6 @@ Note: remember that the printed value of pi will be an estimate!
 import math
 n = int(input("I will estimate e. How many terms should I use? "))
 decimals = int(input("How many decimal places should I use in the result? "))
-e = 4*sum([((-1.0)**k)/math.factorial(2*int(k)) for k in range(0,n)])
+e = 4*sum([((-1.0)**k) / (2*int(k)+1) for k in range(0,n)])
 print("The approximate value of e is {0}".format(round(e, decimals)))
-print("(The true value of e is {0})".format(round(math.e, decimals)))
+
